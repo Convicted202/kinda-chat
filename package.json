@@ -1,0 +1,16 @@
+{
+  "name": "wysiwyg",
+  "version": "0.0.0",
+  "description": "an application which helps to manage rich text in MS office way using HTML5",
+  "main": "index.html",
+  "author": "Alexander Yanovych",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-compass": "~0.7.2"
+  }
+}
