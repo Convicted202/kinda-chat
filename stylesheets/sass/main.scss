@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700);
+//@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700);
 
 /* VARIABLES start */
 /* ======================================= */
@@ -13,6 +13,21 @@ $modal-second-color: #22a86d;
 
 /* ======================================= */
 /* end VARIABLES */
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: #282E3A;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}
 
 * {
     font-family: 'Raleway', sans-serif;
@@ -211,6 +226,47 @@ menu {
         background: #1abc9c;
         border: 2px solid #63666f;
         border-radius: 15px;
+        z-index: 1;
+
+
+    }
+}
+#status-container {
+    display: none;
+    opacity: 0.5;
+    height: 10px;
+    width: 110px;
+    margin: 13px;
+    top: 43px;
+    left: 43px;
+    position: absolute;
+    fill: #FFF;
+    background: #BBB;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-radius: 15px;
+    border: 2px solid #63666F;
+
+    & > .status {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        display: inline-block;
+        left: 35px;
+        top: -7px;
+        border: 2px solid #63666F;
+        border-radius: 15px;
+
+        &.green {
+            background-color: #1ABC9C;
+        }
+        &.yellow {
+            background-color: #FAC75A;
+        }
+        &.red {
+            background-color: #E65D65;
+        }
     }
 }
 #login-button {
@@ -257,15 +313,19 @@ menu {
 #chat-area {
     height: calc(100% - 100px);
     background-color: #383e4c;
+    position: relative;
 }
 #messages-area {
     height: calc(100% - 50px);
     width: 100%;
-    position: relative;
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 0px;
 }
 #new-message-area {
     min-height: 50px;
-    max-height: 350px;
+    //max-height: 300px;
     height: auto;
     background-color: #282e3a;
     bottom: 0;
@@ -302,6 +362,8 @@ menu {
     background-color: #f7f3f2;
     border-radius: 5px;
     padding: 5px 10px;
+    overflow: auto;
+    max-height: 200px;
 }
 #button-add, #button-smile {
     width: 25px;
@@ -329,6 +391,7 @@ menu {
 /* MAIN CHAT STYLES */
 #current-messages-area {
     min-height: 70px;
+    max-height: 100%;
     height: auto;
     bottom: 0;
     position: absolute;

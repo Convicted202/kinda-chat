@@ -233,6 +233,11 @@
                         <use xlink:href="#icon-user"></use>
                     </svg>
                 </div>
+                <div id="status-container">
+                    <div class="status green"></div>
+                    <div class="status yellow"></div>
+                    <div class="status red"></div>
+                </div>
                 <a href="#modal-login" id="login-button" class="button" data-toggle="modal" data-target="#modal-login">
                     <div class="button-icon">
                         <svg viewBox="0 0 32 32">
@@ -323,6 +328,37 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="message opponent">
+                            <div class="time-wrapper">
+                                <div class="time">
+                                    <div class="time-icon">
+                                        <svg viewBox="0 0 32 32">
+                                            <use xlink:href="#icon-clock"></use>
+                                        </svg>    
+                                    </div>
+                                    <div class="time-sent">Today 10:41 AM</div>
+                                </div>
+                            </div>
+                            <div class="avatar">
+                                <svg viewBox="0 0 32 32">
+                                    <use xlink:href="#icon-user"></use>
+                                </svg>
+                            </div>
+                            <div class="message-text-container">
+                                <div class="message-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. 
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- <div class="message"></div> -->
                 </div>
@@ -347,7 +383,7 @@
         </div>
     </div>
 </div>
-    <section id="modal-login" class="modalDialog">
+    <!-- <section id="modal-login" class="modalDialog">
         <div class="modal-container">
             <header>
                 sign in
@@ -380,7 +416,7 @@
             </div>
             <footer></footer>
         </div>
-    </section>
+    </section> -->
     <script src="js/config.js"></script>
     <script data-main="scripts/app.js" src="js/vendor/require.js"></script>
 </body>
