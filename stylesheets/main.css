@@ -112,10 +112,9 @@ menu { list-style: none; padding: 0; margin: 0; }
 
 .modalDialog:target { opacity: 1; pointer-events: auto; }
 
-.modalDialog > div { width: 400px; height: 300px; position: absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0; border-radius: 6px; border: none; background: #fff; }
-
-.modalDialog header { height: 70px; position: relative; background-color: #22a86d; border-top-left-radius: inherit; border-top-right-radius: inherit; border: 1px solid transparent; text-transform: uppercase; vertical-align: middle; line-height: 3em; font-weight: bold; padding-left: 30px; font-size: 23px; box-sizing: border-box; color: rgba(0, 0, 0, 0.6); text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1); box-shadow: 0px 5px 0px #0B4C30; }
-.modalDialog footer { height: 20px; position: relative; background-color: #22a86d; border-bottom-left-radius: inherit; border-bottom-right-radius: inherit; border: 0px solid transparent; box-shadow: 0px -5px 0px #0B4C30 inset; }
+.modal-container { width: 400px; height: 300px; position: absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0; border-radius: 6px; border: none; background: #fff; }
+.modal-container header { height: 70px; position: relative; background-color: #22a86d; border-top-left-radius: inherit; border-top-right-radius: inherit; border: 1px solid transparent; text-transform: uppercase; vertical-align: middle; line-height: 3em; font-weight: bold; padding-left: 30px; font-size: 23px; box-sizing: border-box; color: rgba(0, 0, 0, 0.6); text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1); box-shadow: 0px 5px 0px #0B4C30; }
+.modal-container footer { height: 20px; position: relative; background-color: #22a86d; border-bottom-left-radius: inherit; border-bottom-right-radius: inherit; border: 0px solid transparent; box-shadow: 0px -5px 0px #0B4C30 inset; }
 
 #login-google-button { width: 60px; height: 60px; padding: 10px; margin: 5px; float: right; box-sizing: border-box; fill: #fff; background-color: #DD4B39; border-radius: 5px; }
 #login-google-button:hover { background-color: #EC7063; box-shadow: none; }

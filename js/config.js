@@ -4,6 +4,7 @@ var require = {
         jquery: 'vendor/jQuery',
         underscore: 'vendor/underscore',
         text: 'vendor/require.text',
+        backbone: 'vendor/backbone',
         templates: '../templates'
     },
     shim: {
@@ -12,6 +13,10 @@ var require = {
         },
         jquery : {
             exports : '$'
-        }
+        },
+        backbone : {
+            deps : ['underscore', 'jquery'],
+            exports : 'Backbone'
+        },
     }
 };
