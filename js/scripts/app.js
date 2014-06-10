@@ -8,7 +8,7 @@ require([
     console.log('we\'re inside of app');
     
     $(function () {
-        new Router();
+        var route = new Router();
         Backbone.history.start();
     });
 });

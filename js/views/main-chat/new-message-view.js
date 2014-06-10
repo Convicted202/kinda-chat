@@ -36,7 +36,8 @@ define([
             if (e.keyCode === 13) {
                 if (e.ctrlKey) {
                     var th = $(this.getSelectionStart()),
-                        cur = null
+                        cur = null,
+                        input = $('#message-input');
                     if (th.attr('id') === 'message-input') {
                         th.append('<div data-current><br></div>');
                     } else {
@@ -45,6 +46,7 @@ define([
                     cur = $('div[data-current]');
                     cur.caret(0);
                     cur.removeAttr('data-current');
+                    input.scrollTop(input.height());
                 } else {
                     this.addNewMessage();
                 }

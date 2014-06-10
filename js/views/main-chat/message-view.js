@@ -23,7 +23,9 @@ define([
         },
 
         reflow: function() {
+            var messages = $('#messages-area');
             $('#current-messages-area').append(this.$el);
+            messages.scrollTop(messages.height());
             return this;
         }
 

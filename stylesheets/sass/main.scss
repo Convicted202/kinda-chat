@@ -41,6 +41,10 @@ html, body {
     background: #4a4f55;
     overflow: hidden;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 #main-wrapper {
     height: calc(100% - 50px);
     position: relative;

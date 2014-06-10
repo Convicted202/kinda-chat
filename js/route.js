@@ -1,13 +1,14 @@
 define([
     'jquery',
     'backbone',
-    'views/main-chat/chat-view'
-    ], function($, Backbone, ChatView) {
+    'views/main-chat/chat-view',
+    'views/rooms/rooms-view',
+    'views/profile/profile-view'
+    ], function($, Backbone, ChatView, RoomsView, ProfileView) {
 
     $.extend(Backbone, {
         areas: {
-            main: '#main-area',
-            chat: '#current-messages-area'
+            main: '#main-area'
         }
     });
 
@@ -15,6 +16,14 @@ define([
         this.chat = function () {
             console.log('chat');
             new ChatView().render();
+        },
+        this.rooms = function() {
+            console.log('rooms');
+            new RoomsView().render();
+        },
+        this.profile = function() {
+            console.log('profile');
+            new ProfileView().render();
         }
     }
 
@@ -25,8 +34,11 @@ define([
         },
 
         routes: {
-            "":         Renderer.chat, 
-            "#/chat":   Renderer.chat     // #chat
+            "":         Renderer.chat,
+            // "#":       Renderer.chat,
+            "chat":     Renderer.chat,         // chat
+            "rooms":    Renderer.rooms,        // rooms
+            "profile":  Renderer.profile,    // profile
         }
         //,
 
