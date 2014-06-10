@@ -18,6 +18,9 @@ define([
         template : _.template(Template),
 
         initialize: function() {
+            if (MessagesCollection.length > 0) {
+                return;
+            }
             for (var i = 0; i < 5; i++) {
                 MessagesCollection.add({
                     isOpponent  : (i % 2 === 0),
@@ -49,6 +52,7 @@ define([
             } else {
                 length = MessagesCollection.length - length;
             }
+            $(this.currentMessageContainer).html('');
             for (var i = MessagesCollection.length - 1; i > length; i--) {
                 $(this.currentMessageContainer).append((new MessageView({ model: MessagesCollection.models[i] })).render().el);
             }
